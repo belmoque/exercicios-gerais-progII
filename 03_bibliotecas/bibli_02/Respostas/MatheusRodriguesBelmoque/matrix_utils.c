@@ -10,7 +10,7 @@
  * @param matrix Matriz a ser preenchida.
  */
 void matrix_read(int rows, int cols, int matrix[rows][cols]){
-    int i,j;
+    int i=0,j=0;
     for(i=0;i<rows;i++){
         scanf("%*[^\n]");
         for(j=0;j<cols;j++){
@@ -29,10 +29,10 @@ void matrix_read(int rows, int cols, int matrix[rows][cols]){
 void matrix_print(int rows, int cols, int matrix[rows][cols]){
     int i,j;
     for(i=0;i<rows;i++){
-        printf("|");
+        printf("\n|");
         for(j=0;j<cols;j++){
-            printf("%d",matrix[rows][cols]);
-            if(j==cols){
+            printf("%d",matrix[i][j]);
+            if(j==cols-1){
                 printf("|");
             }else{
                 printf(" ");
